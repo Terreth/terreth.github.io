@@ -6,9 +6,6 @@ A land-backed ethereum token.
 
 #What we've built:
 
-
-#What we've built:
-
 Smart contract liquid democracy system
 Online management software
 Micropayment widgets for using this token
