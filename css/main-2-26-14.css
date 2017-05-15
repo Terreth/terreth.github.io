@@ -1,0 +1,1297 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'ProcionoRegular';
+    src: url('../fonts/Prociono-Regular-webfont.eot');
+    src: url('../fonts/Prociono-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Prociono-Regular-webfont.woff') format('woff'),
+         url('../fonts/Prociono-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Prociono-Regular-webfont.svg#ProcionoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaWorldBold';
+    src: url('../fonts/helvetica_world_bold.eot');
+    src: url('../fonts/helvetica_world_bold.eot') format('embedded-opentype'),
+         url('../fonts/helvetica_world_bold.woff') format('woff'),
+         url('../fonts/helvetica_world_bold.ttf') format('truetype'),
+         url('../fonts/helvetica_world_bold.svg#HelveticaWorldBold') format('svg');
+}
+
+@font-face {
+    font-family: 'JournalRegular';
+    src: url('../fonts/journal-webfont.eot');
+    src: url('../fonts/journal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/journal-webfont.woff') format('woff'),
+         url('../fonts/journal-webfont.ttf') format('truetype'),
+         url('../fonts/journal-webfont.svg#JournalRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    font-family: 'ProcionoRegular', serif, georgia;
+    font-size: 17px;
+    color: #2e2c21;
+    background: #2e2c21 url(../img/bg_landing_nele2.jpg) center 0 repeat-x;
+}
+
+.ie8 body {
+    background: url(../img/bg_landing_nele2.jpg) center 0 repeat-x;
+}
+
+a {
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out; 
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+.white-background p {
+    margin: 0;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	color: #000;
+	padding: 8px 8px 15px 15px;
+	border-radius:10px;
+	background: #fff; /* fallback for browsers that don't understand rgba */
+	border: #solid 10px #000; /* fallback for browsers that don't understand rgba */
+	background-color: rgba(255,255,255,0.65); 
+	border-color: solid 10px rgba(0,0,0,0.2); /*Very transparent black*/
+	margin-bottom: 5px;
+	
+}
+
+div .white-background-div {
+    margin: 0;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	color: #000;
+	padding: 8px 8px 15px 15px;
+	border-radius:10px;
+	background: #fff; /* fallback for browsers that don't understand rgba */
+	border: #solid 10px #000; /* fallback for browsers that don't understand rgba */
+	background-color: rgba(255,255,255,0.65); 
+	border-color: solid 10px rgba(0,0,0,0.2); /*Very transparent black*/
+	margin-bottom: 5px;
+	
+}
+
+
+#head {
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+
+
+.logo {
+    display: block;
+    float: left;
+}
+
+.social-links {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links > li {
+    float: left;
+    margin-left: 19px;
+}
+
+.social-links > li > a {
+    display: block;
+    height: 34px;
+    padding: 0 28px;
+    border-radius: 20px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 14px;
+    line-height: 34px;
+    color: #fff;
+    background-color: #4d4b42;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#4d4b42), to(#27251c));
+    background-image: -webkit-linear-gradient(top, #4d4b42, #27251c);
+    background-image:    -moz-linear-gradient(top, #4d4b42, #27251c);
+    background-image:      -o-linear-gradient(top, #4d4b42, #27251c);
+    background-image:         linear-gradient(to bottom, #4d4b42, #27251c);
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+.social-links > li > a:hover {
+    text-decoration: none;
+}
+
+.social-links > li.fb > a {
+    width: 34px;
+    padding: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+.social-links > li.fb > a > i {
+    display: block;
+    background: url(../img/ico_fb.png) 12px 9px no-repeat;
+}
+
+.social-links > li.tw > a {
+    width: 34px;
+    padding: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+.social-links > li.tw > a > i {
+    display: block;
+    background: url(../img/ico_tw.png) 11px 10px no-repeat;
+}
+
+.social-links > li.tu > a {
+    width: 34px;
+    padding: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+.social-links > li.tu {
+    margin-right: 19px;
+}
+
+.social-links > li.tu > a > i {
+    display: block;
+    background: url(../img/ico_tu.png) 10px 8px no-repeat;
+}
+
+h1 {
+    margin: 47px 0 46px;
+    font-size: 58px;
+    line-height: 57px;
+    color: #fff;
+}
+
+h1 strong {
+    display: block;
+    font-size: 83px;
+}
+
+#main p strong {
+    color: #fff;
+}
+
+#main p strong span {
+    float: left;
+    height: 54px;
+    margin-top: -8px;
+    font-size: 45px;
+}
+/*
+ * SLider
+ */
+ #main-slider {
+    height: 420px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+
+#main-slider li {
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+
+.bx-wrapper {
+    position: relative;
+}
+
+.bx-prev,
+.bx-next {
+    display: block;
+    position: absolute;
+    top: 278px;
+    width: 77px;
+    height: 153px;
+    z-index: 100;
+    overflow: hidden;
+    text-indent: -9999em;
+    outline: none;
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out; 
+}
+
+.bx-next:focus,
+.bx-prev:focus {
+    outline: none;
+}
+
+.bx-prev {
+    left: 20px;
+    background: url(../img/misc_prev.png) 0 0 no-repeat;
+}
+
+.bx-next {
+    right: 20px;
+    background: url(../img/misc_next.png) 0 0 no-repeat;
+}
+.bx-prev:hover,
+.bx-next:hover {
+    opacity: 0.8;
+}
+
+.bx-pager.bx-default-pager {
+    display: none;
+}
+
+.iphone_black,
+.iphone_black:focus {
+    display: block;
+    position: absolute;
+    width: 329px;
+    height: 757px;
+    padding: 150px 76px 0 89px;
+    bottom: -900px;
+    left: 50%;
+    margin-left: -247px;
+    z-index: 9;
+    outline: none;
+    background: url(../img/pic_iphone_black.png) no-repeat;
+    background-size: contain;
+    -webkit-transition: all 0.5s ease-out; 
+    -moz-transition: all 0.5s ease-out; 
+    -o-transition: all 0.5s ease-out; 
+    transition: all 0.5s ease-out; 
+}
+
+.iphone_black:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 494px;
+    height: 907px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: url(../img/glare.png) no-repeat;
+    background-size: contain;
+    -webkit-transition: all 0.5s ease-out; 
+    -moz-transition: all 0.5s ease-out; 
+    -o-transition: all 0.5s ease-out; 
+    transition: all 0.5s ease-out; 
+}
+
+.iphone_black img {
+    width: 100%;
+    height: auto;
+}
+
+.inview .iphone_black {
+    bottom: -575px;
+}
+
+.inview .iphone_black:hover {
+    opacity: 1;
+    bottom: -489px;
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    z-index: 11;
+    margin: 53px -1400px 0 0;
+    font-family: 'JournalRegular', serif, georgia;
+    font-size: 30px;
+    color: #fff;
+    -webkit-transition: all 1s ease-out; 
+    -moz-transition: all 1s ease-out; 
+    -o-transition: all 1s ease-out; 
+    transition: all 1s ease-out;
+}
+
+.inview .title {
+    margin: 203px 579px 0 0;
+}
+
+.title:after {
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    right: -75px;
+    width: 67px;
+    height: 53px;
+    content:"";
+    background: url(../img/ico_arrow_down.png) 0 0 no-repeat;
+    -webkit-transition: all 1s ease-out; 
+    -moz-transition: all 1s ease-out; 
+    -o-transition: all 1s ease-out; 
+    transition: all 1s ease-out;
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+
+.inview .title:after {
+    opacity: 1;
+}
+
+.play {
+    display: block;
+    position: relative;
+    z-index: 10;
+    width: 78px;
+    height: 76px;
+    margin: 22% auto;
+    text-indent: -9999em;
+    overflow: hidden;
+    background: url(../img/ico_play.png) 0 0 no-repeat;
+}
+
+#download {
+    box-shadow: inset 0 21px 21px rgba(0, 0, 0, 0.2);
+    background: url(../img/bg_download.jpg);
+}
+
+#download .container {
+    padding-top: 71px;
+    min-height: 411px;
+    background: url(../img/pic_vine.png) center 100% no-repeat;
+ }
+
+h2 {
+    margin: 0 0 53px;
+    font-size: 29px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+h2 span {
+    color: #669927;
+}
+
+h3 {
+    margin: 0 0 18px;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+h3 span {
+    color: #669927;
+}
+
+#download .span4 {
+    text-align: center;
+}
+
+#download a {
+    display: block;
+    width: 200px;
+    height: 66px;
+    margin: 90px 0 0 0;
+    color: #fff;
+    outline: none;
+    border-radius: 33px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.35);
+    background-color: #666352;
+    background-image: -webkit-gradient(linear, top, bottom, from(#666352), to(#4a4737));
+    background-image: -webkit-linear-gradient(top, #666352, #4a4737);
+    background-image:    -moz-linear-gradient(top, #666352, #4a4737);
+    background-image:      -o-linear-gradient(top, #666352, #4a4737);
+    background-image:         linear-gradient(to bottom, #666352, #4a4737);
+}
+
+#download a:hover,
+#download a:visited,
+#download a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+#download a i {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 100%;
+    margin-right: 32px;
+    margin-left: 35px;
+    text-indent: -9999em;
+    background: url(../img/ico_phone.png) 0px 14px no-repeat;
+}
+
+#download a p {
+    display: block;
+    float: left;
+    width: 75px;
+    margin-top: 11px;
+    overflow: hidden;
+    line-height: 22px;
+    text-align: left;
+}
+
+/*
+ *Footer
+ */
+
+#foot {
+    line-height: 58px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 12px;
+    color: #575748;
+    background-color: #fff;
+}
+
+#foot p {
+    margin: 0;
+    color: #575748;
+}
+
+#foot .copyrights {
+    float: left;
+}
+
+#foot .social-media {
+    float: right;
+}
+
+#foot .social-media p {
+    float: left;
+}
+
+#foot .social-media ul {
+    float: right;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+#foot .social-media li {
+    float: left;
+    margin-left: 20px;
+}
+
+#foot .social-media li a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+#foot .social-media .fb a {
+    background: url(../img/ico_fb_grey.png) center 0 no-repeat;
+}
+
+#foot .social-media .tw a {
+    background: url(../img/ico_tw_grey.png) center 0 no-repeat;
+}
+
+
+/*
+ * Popup login
+ */
+
+.modal.login {
+    padding: 82px 2% 2%;
+    border-radius: 13px;
+    background-color: #262419;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.login span {
+    display: block;
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    margin-left: -69px;
+    width: 139px;
+    height: 154px;
+    background: url(../img/popup_logo.png) 0 0 no-repeat;
+}
+
+.login .close {
+    width: 24px;
+    height: 26px;
+    margin-top: -43px;
+    text-indent: -9999em;
+    background: url(../img/ico_close.png) 0 0 no-repeat;
+}
+
+.login form input {
+    width: 90%;
+    height: 68px;
+    margin-bottom: 18px;
+    padding: 0 5%;
+    border: none;
+    border-radius: 34px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 15px;
+    color: #5c5c4c;
+    background-color: #0d0a07;
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.15);
+}
+
+.login form button {
+    width: 100%;
+    height: 68px;
+    padding: 0;
+    border: none;
+    border-radius: 34px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 21px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.30);
+    background: url(../img/bg_login_btn.jpg) 0 0 repeat-x;
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out; 
+}
+
+.login form button:hover {
+    opacity: 0.8;
+}
+
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    #main-slider {
+        height: 555px;
+    }
+    #download a {
+        margin: 90px 0 0;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    #head,
+    #download,
+    #foot {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #main-slider {
+        height: 508px;
+    }
+    .iphone_black,
+    .inview .iphone_black {
+        width: 267px;
+        margin-left: -200px;
+        padding: 122px 61px 0 72px;
+    }
+    .iphone_black:after {
+        width: 400px;
+    }
+    .inview .title {
+        margin: 135px 340px 0 0;
+    }
+    #download a {
+        float: none;
+        margin: 0 auto;
+    }
+    #download a.pull-left {
+        margin-bottom: 20px;
+    }
+    #foot {
+        line-height: 35px;
+        text-align: center;
+    }
+    #foot .copyrights {
+        float: none;
+        margin-top: 10px;
+        line-height: 13px;
+    }
+    #foot .social-media {
+        float: none;
+        margin-bottom: 20px;
+    }
+    #foot .social-media p {
+        float: none;
+    }
+    #foot .social-media ul {
+        float: none;
+        margin: 0 auto;
+        width: 100px;
+    }
+    .modal.fade.in {
+        top: 68px;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    #head {
+        padding-top: 10px;
+    }
+    .logo {
+        float: none;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .social-links {
+        float: none;
+        display: table;
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .social-links > li {
+        margin-left: 0;
+    }
+    h1 {
+        margin: 24px 0;
+        font-size: 44px;
+        line-height: 43px;
+        text-align: center;
+    }
+    h1 strong {
+        font-size: 57px;
+    }
+    #main-slider {
+        height: 350px;
+    }
+    .bx-prev, 
+    .bx-next {
+        top: 114px;
+    }
+    .iphone_black,
+    .inview .iphone_black {
+        width: 201px;
+        margin-left: -150px;
+        padding: 91px 45px 0 54px;
+    }
+    .iphone_black:after {
+        width: 300px;
+    }
+    .inview .iphone_black {
+        bottom: -558px;
+    }
+    .inview .iphone_black:hover {
+        bottom: -500px;
+    }
+}
+
+
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    vertical-align: top;
+}
+
+.fancybox-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8020;
+}
+
+.fancybox-skin {
+    position: relative;
+    background: #f9f9f9;
+    color: #444;
+    text-shadow: none;
+    -webkit-box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.6);
+       -moz-box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.6);
+}
+
+.fancybox-opened {
+    z-index: 8030;
+}
+
+.fancybox-opened .fancybox-skin {
+    -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+       -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.fancybox-outer, .fancybox-inner {
+    position: relative;
+}
+
+.fancybox-inner {
+    overflow: hidden;
+}
+
+.fancybox-type-iframe .fancybox-inner {
+    -webkit-overflow-scrolling: touch;
+}
+
+.fancybox-error {
+    color: #444;
+    font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.fancybox-image, .fancybox-iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.fancybox-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-image: url('../img/fancybox_sprite.png');
+}
+
+#fancybox-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -22px;
+    margin-left: -22px;
+    background-position: 0 -108px;
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 8060;
+}
+
+#fancybox-loading div {
+    width: 44px;
+    height: 44px;
+    background: url('../img/fancybox_loading.gif') center center no-repeat;
+}
+
+.fancybox-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 8040;
+}
+
+.fancybox-nav {
+    position: absolute;
+    top: -50px;
+    width: 40%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent url('../img/blank.gif'); /* helps IE */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    z-index: 8040;
+}
+
+.fancybox-prev {
+    left: 0;
+}
+
+.fancybox-next {
+    right: 0;
+}
+
+.fancybox-nav span {
+    position: absolute;
+    top: 50%;
+    width: 36px;
+    height: 34px;
+    margin-top: -18px;
+    cursor: pointer;
+    z-index: 8040;
+    visibility: hidden;
+}
+
+.fancybox-prev span {
+    left: 10px;
+    background-position: 0 -36px;
+}
+
+.fancybox-next span {
+    right: 10px;
+    background-position: 0 -72px;
+}
+
+.fancybox-nav:hover span {
+    visibility: visible;
+}
+
+.fancybox-tmp {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+    visibility: hidden;
+    max-width: 99999px;
+    max-height: 99999px;
+    overflow: visible !important;
+}
+
+/* Overlay helper */
+
+.fancybox-lock {
+    overflow: hidden !important;
+    width: auto;
+}
+
+.fancybox-lock body {
+    overflow: hidden !important;
+}
+
+.fancybox-lock-test {
+    overflow-y: hidden !important;
+}
+
+.fancybox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+    z-index: 8010;
+    background: transparent;
+}
+
+.fancybox-overlay-fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+/* Title helper */
+
+.fancybox-title {
+    visibility: hidden;
+    font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    position: relative;
+    text-shadow: none;
+    z-index: 8050;
+}
+
+.fancybox-opened .fancybox-title {
+    visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    margin-bottom: -35px;
+    z-index: 8050;
+    text-align: center;
+}
+
+.fancybox-title-float-wrap .child {
+    display: inline-block;
+    margin-right: -100%;
+    padding: 2px 20px;
+    background: transparent; /* Fallback for web browsers that doesn't support RGBa */
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-border-radius: 15px;
+       -moz-border-radius: 15px;
+            border-radius: 15px;
+    text-shadow: 0 1px 2px #222;
+    color: #FFF;
+    font-weight: bold;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+.fancybox-title-outside-wrap {
+    position: relative;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.fancybox-title-inside-wrap {
+    padding-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 10px;
+    background: #000;
+    background: rgba(0, 0, 0, .8);
+}
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5){
+
+    #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+        background-image: url('../img/fancybox_sprite@2x.png');
+        background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
+    }
+
+    #fancybox-loading div {
+        background-image: url('../img/fancybox_loading@2x.gif');
+        background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*
+ * Extra additions.
+ * 
+ */
+
+.button-style {
+    display: block;
+    height: 72px;
+    padding: 0 28px;
+    border-radius: 20px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 25px;
+	text-align: center;
+    line-height: 72px;
+    color: #fff;
+    background-color: #4d4b42;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#4d4b42), to(#27251c));
+    background-image: -webkit-linear-gradient(top, #4d4b42, #27251c);
+    background-image:    -moz-linear-gradient(top, #4d4b42, #27251c);
+    background-image:      -o-linear-gradient(top, #4d4b42, #27251c);
+    background-image:         linear-gradient(to bottom, #4d4b42, #27251c);
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+.button-style a:hover {
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+

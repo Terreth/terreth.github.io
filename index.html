@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+        <meta charset="utf-8">
+        <title>Greenz intro</title>
+        <meta name="description" content="Introduction to one click social payment. How it works, why it works. How to monetize your online content.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/evg-web-v2.css">
+
+
+        <script src="js-lib/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body class="light">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=349260755195287";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+
+        <header id="head">
+                <div class="container">
+	
+                        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+                        <ul class="social-links clearfix">
+                                <li class="fb"><a href="http://www.facebook.com/getgreenz" title="Evergreen on Facebook" target="_blank"><i>&nbsp;</i>facebook</a></li>
+                                <li class="tw"><a href="http://twitter.com/getgreenz" target="_blank" title="Evergreen on Twitter"><i>&nbsp;</i>twitter</a></li>
+                                <li class="tu"><a href="http://b.evr.gr" target="_blank" title="Evergreen Blog (Tumblr)"><i>&nbsp;</i>tumblr</a></li>
+                                <li class="clearfix"><a href="assets.html" role="button" title="Evergreen Assets">Assets</a></li>
+                                <!--<li class="clearfix"><a href="team.html" role="button">Team</a></li>-->
+                                <li class="clearfix"><a href="#myModal" role="button" data-toggle="modal">Login</a></li>
+                                <!--<li class="clearfix"><a href="#googleMapModal" role="button" data-toggle="modal">Where we are</a></li>-->
+                        </ul>
+                </div>
+                <!-- / container -->
+        </header>
+        <!-- head -->
+		<script>
+		  window.fbAsyncInit = function() {
+		  FB.init({
+		    appId      : '349260755195287',
+		    status     : true, // check login status
+		    cookie     : true, // enable cookies to allow the server to access the session
+		    xfbml      : true  // parse XFBML
+		  });
+
+		  // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
+		  // for any authentication related change, such as login, logout or session refresh. This means that
+		  // whenever someone who was previously logged out tries to log in again, the correct case below 
+		  // will be handled. 
+		  FB.Event.subscribe('auth.authResponseChange', function(response) {
+		    // Here we specify what we do with the response anytime this event occurs. 
+		    console.log('auth.authResponseChange');
+
+		    console.log(response);
+		    if (response.status === 'connected') {
+		      // The response object is returned with a status field that lets the app know the current
+		      // login status of the person. In this case, we're handling the situation where they 
+		      // have logged in to the app.
+		      // testAPI();
+
+			console.log('response connected');
+
+
+			    var iframe = document.getElementById('webWalletFrame'); 
+				var url = "https://eu.evr.gr/evg-web-wallet.html?facebookAuthToken=" + response["authResponse"]["accessToken"] + "&facebookId=" + response["authResponse"]["userID"]  ;
+			    iframe.src = url; 
+			    //iframe.reload();  
+				$('#myModal').modal('show');
+
+
+		    } else if (response.status === 'not_authorized') {
+		      // In this case, the person is logged into Facebook, but not into the app, so we call
+		      // FB.login() to prompt them to do so. 
+		      // In real-life usage, you wouldn't want to immediately prompt someone to login 
+		      // like this, for two reasons:
+		      // (1) JavaScript created popup windows are blocked by most browsers unless they 
+		      // result from direct interaction from people using the app (such as a mouse click)
+		      // (2) it is a bad experience to be continually prompted to login upon page load.
+		      FB.login();
+		    } else {
+		      // In this case, the person is not logged into Facebook, so we call the login() 
+		      // function to prompt them to do so. Note that at this stage there is no indication
+		      // of whether they are logged into the app. If they aren't then they'll see the Login
+		      // dialog right after they log in to Facebook. 
+		      // The same caveats as above apply to the FB.login() call here.
+		      FB.login();
+		    }
+		  });
+		  };
+
+		  // Load the SDK asynchronously
+		  (function(d){
+		   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+		   if (d.getElementById(id)) {return;}
+		   js = d.createElement('script'); js.id = id; js.async = true;
+		   js.src = "//connect.facebook.net/en_US/all.js";
+		   ref.parentNode.insertBefore(js, ref);
+		  }(document));
+
+		  // Here we run a very simple test of the Graph API after login is successful. 
+		  // This testAPI() function is only called in those cases. 
+		  function testAPI() {
+		    console.log('Welcome!  Fetching your information.... ');
+		    FB.api('/me', function(response) {
+		      console.log('Good to see you, ' + response.name + '.');
+		    });
+		  }
+
+		  function fbLoginOnComplete(response) {
+				console.log('onCompete');
+				console.log(response);
+				// 
+				// 		    var iframe = document.getElementById('webWalletFrame'); 
+				// var url = "https://eu.evr.gr?facebookAuthToken=" + response["authResponse"]["accessToken"] + "&facebookId" + response["authResponse"]["userID"]  ;
+				// 		    iframe.src = url; 
+				// 		    iframe.reload();  
+				// $('#myModal').modal('show');
+
+
+			}
+		</script>
+
+        <section id="main" class="faq">
+                <div class="container">
+                    <!--<a href="#" class="btn-light">Email us your questions</a>-->
+                    <div class="row">
+                        <div class="span6">
+                            <dl>
+    
+									<h1 style="color:rgb(179, 245, 170)">Greenz</h1>
+
+									<h2 style="color:#74E3F7;text-shadow:none">One click social payments</h2>
+									<a href="#myModal" role="button" data-toggle="modal" class="button-green">Get started</a>										
+										<div class="fb-login-button" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="fbLoginOnComplete"></div>
+
+
+
+                            </dl>
+                        </div><!-- / span6 -->
+                        <div class="span6">
+		
+                            <dl>
+
+
+                            </dl>
+                        </div><!-- / span6 -->
+                    </div><!-- row -->
+                    <!--<a href="#" class="back-light">go back</a>-->
+					<ul id="main-slider">
+						<li>  
+							<a href="http://www.youtube.com/embed/QMMvPMvylKA?autoplay=1&wmode=opaque&hd=1" class="various fancybox.iframe iphone_black" title="What is the benefit of using evergreen?" data-fancybox-group="gallery">
+								<img src="img/video/pic_digital_currency_intro_top_left_small2.png">
+							</a>
+							<p class="title">What is the benefit of using evergreen?</p>
+						</li> 
+
+						<li>  
+							<a href="http://www.youtube.com/embed/8xGdTV_UMOg?autoplay=1&wmode=opaque&hd=1" class="various fancybox.iframe iphone_black" title="Introducing Evergreen" data-fancybox-group="gallery">
+								<img src="img/video/pic_video_network.png">
+							</a>
+							<p class="title">Introducing Evergreen</p>
+						</li>
+
+
+						<li>  
+							<a href="http://www.youtube.com/embed/CRPO7FVsqeE?autoplay=1&wmode=opaque&hd=1" class="various fancybox.iframe iphone_black" title="How does Evergreen compare to Bitcoin?" data-fancybox-group="gallery">
+								<img src="img/video/pic_digital_currency_intro_top_left_small2.png">
+							</a>
+							<p class="title">How does Evergreen compare to Bitcoin?</p>
+						</li> 
+
+						<li>
+							<a href="http://www.youtube.com/embed/V2hPVJjUxTM?autoplay=1&wmode=opaque&hd=1" class="various fancybox.iframe iphone_black" title="Why use Evergreen" data-fancybox-group="gallery">
+								<img src="img/video/pic_video_agora_inside.png">
+							</a>
+							<p class="title">Why use Evergreen</p>
+						</li> 
+						<li>  
+							<a href="http://www.youtube.com/embed/KhFrywDX0e8?autoplay=1&wmode=opaque&hd=1" class="various fancybox.iframe iphone_black" title="How to be an Evergreen merchant" data-fancybox-group="gallery">
+								<img src="img/video/pic_video2.jpg">
+							</a>
+							<p class="title">How to be an Evergreen merchant </p>
+						</li>
+						<li>  
+							<a href="http://www.youtube.com/embed/pSx8jWikEPg?autoplay=1&wmode=opaque&hd=1" class="various fancybox.iframe iphone_black" title="The Evergreen vision" data-fancybox-group="gallery">
+								<img src="img/video/pic_video_assisi4.jpg">
+							</a>
+							<p class="title">The Evergreen vision</p>
+						</li>
+					</ul>
+
+                </div><!-- container -->
+        </section>
+        <!-- / main -->
+        
+        <section id="download">
+                <div class="container">
+                        <h2>Download <img src="img/evg-text.png"> on your iPhone or Android phone</h2>
+                        <div class="row">
+                                <div class="span4 clearfix">
+                                        <a href="https://itunes.apple.com/us/app/evergreen-app/id667409093?ls=1&mt=8" class="pull-right" target="_blank"><i>&nbsp;</i><p>download iPhone</p></a>
+                                </div>
+                                <!-- span4 -->
+                                <div class="span4">
+                                        <img src="img/logo_big.png" alt="logo">
+                                </div>
+                                <!-- span4 -->
+                                <div class="span4 clearfix">
+                                        <a href="http://greenz.io/mobile.html" class="pull-left"><i>&nbsp;</i><p>mobile web</p></a>
+                                </div>
+                                <!-- span4 -->
+                        </div>
+
+
+
+                </div>
+                <!-- / container -->
+        </section>
+        <!-- download -->
+
+        <footer id="foot">
+                <div class="container">
+                        <p class="copyrights">Copyright &copy; 2013 by Evergreen. All Rights Reserved.</p>
+                        <div class="social-media">
+                                <p>Join us:</p>
+                                <ul class="clearfix">
+                                        <li class="tw"><a href="http://twitter.com/getgreenz" target="_blank">twitter</a></li>
+                                        <li class="fb"><div class="fb-like" data-href="https://www.facebook.com/getgreenz" data-width="250" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="true"></div></li>
+                                </ul>
+                        </div>
+                        <!-- social-media -->
+
+
+
+                </div>
+                <!-- / container -->
+        </footer>
+        <!-- / foot -->
+
+		<!-- Modal -->
+		<div id="myModal" class="modal hide fade login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<button class="close" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+
+			<!-- <form>
+				<input type="text" placeholder="Username">
+				<input type="password" placeholder="Password">
+				<button>Sign In</button>
+			</form> -->
+
+			<iframe id="webWalletFrame" src="https://eu.evr.gr/evg-web-wallet.html" width="399px" height="400px" frameBorder="0"></iframe>
+		</div>
+		<!-- myModal -->
+
+        
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+       <script src="js-lib/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+         var _gaq = _gaq || [];
+         _gaq.push(['_setAccount', 'UA-39810352-1']);
+         _gaq.push(['_trackPageview']);
+
+         (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         })();
+        </script>
+</body>
+</html>

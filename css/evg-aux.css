@@ -1,0 +1,170 @@
+/* JD Custom */
+
+.transaction-item {
+  padding-left: 30px;
+}
+
+.transaction-item-detail {
+  padding-left: 15px;
+  /* background-color: #eff6df; */
+}
+
+.bubbleInfo {
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+    display: none; /* keeps the popup hidden if no JS available */
+    color: #95c036;
+}
+
+.video-bar {
+  margin: 0 -20px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #cfd9b8;
+  background: #eff6df;
+}
+
+
+.info-bar {
+  margin: 0 -20px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #cfd9b8;
+  background: #eff6df;
+}
+
+.info-bar .class {
+  float: left;
+/*  margin-left: 240px;
+*/ font-weight: bold;
+  font-size: 12px;
+  line-height: 0px;
+  color: #4b4b4b;
+
+}
+
+.info-bar .level {
+  float: right;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 0px;
+  color: #4b4b4b;
+}
+
+.list-item .list-expander{
+  float: right;
+}
+
+.list-item .user {
+  padding: 15px 20px;
+}
+
+.list-item .store-item img {
+  float: right;
+  margin-top: -2px;
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.list-item img {
+  float: right;
+  margin-top: -2px;
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.list-item .date-label {
+   color: #95c036;
+
+}
+
+.list-item .status-label {
+   color: #95c036;
+
+}
+
+.item-add-bar {
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.item-add-bar div.second-row {
+	
+	padding-top:5px;
+}
+
+.item-add-bar input:first-child {
+  width: 255px;
+  margin-right: 10px;
+}
+
+.item-add-bar input.right-element {
+  width: 80px;
+  float: right;
+
+}
+
+.item-add-bar input.large-input {
+  width: 255px;
+  margin-right: 10px;
+
+}
+
+.item-add-bar button {
+  float: right;
+}
+
+.pay-bar input.large-input {
+  width: 255px;
+  margin-right: 10px;
+
+}
+
+.login-form .facebook-connect-link {
+	
+  font-size: 11.5px;
+  line-height: 22px;
+  color: #6052E3;
+}
+
+
+.bottom-status-bar
+{
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    height: 30px;    
+    padding: 5px;
+ 
+    background: #57B418;
+    color: white;    
+    border: solid 1px lightgray;
+ 
+    opacity: .70;    
+    filter: alpha(opacity="70");
+    z-index: 200;
+ 
+    overflow: hidden;
+    overflow-y: auto; 
+}
+
+.bottom-status-bar .loginout
+{
+	float:right;
+
+}
+
+.bottom-status-bar-highlight
+{
+    font-weight: bold;
+    background-color: white;
+    color: #57B418;
+    border: solid 1px silver;
+}
+
+
+

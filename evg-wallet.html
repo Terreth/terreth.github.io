@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EVG</title>
+    <!-- Bootstrap -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+        <link href="css/evg-chrome.css" rel="stylesheet">
+        <link href="css/evg-aux.css" rel="stylesheet">
+
+       <link href="css/greenz/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+  
+		<script src="js-lib/jquery.js"></script>
+		<script src="js-lib/jquery-ui.js"></script>
+		<script src="js-lib/jquery.validate.min.js"></script>
+
+	  <!-- Include all compiled plugins (below), or include individual files as needed -->
+	   <!--<script src="js-lib/fb-connect.js"></script>
+	   <script src="js/evg-facebook-background.js"></script>
+	   <script src="js/evg-global-vars.js"></script>
+	-->
+	   <script src="js/evg-environment-vars.js"></script>
+	   <script src="js/evg-global-vars.js"></script>
+	   <script src="js/evg-user-id.js"></script>
+	   <script src="js/evg-storage.js"></script>
+	   <script src="js/evg-effects.js"></script>
+	   <script src="js/evg-meta.js"></script>
+	   <script src="js/evg-requests.js"></script>
+	   <script src="js/evg-currency.js"></script>
+	   <script src="js/evg.js"></script>
+	   <script src="js/evg-api.js"></script>
+
+  </head>
+  <body>
+
+				<header class="bubbleInfo">
+			      <a href="#" class="logo trigger">Evergreen</a>
+			      <ul class="action-icons">
+			        <li><a href="#" class="ico-cart">Cart</a></li>
+			        <li><a href="#" class="ico-user">User</a></li>
+			      </ul><!-- / action-icons -->
+				  <div id="popup" class="popup">
+				    Welcome!
+				  </div>
+			    </header>
+
+				<main>
+						  <div id="login">
+								<div id="login-box" class="login-form">
+
+									<h3 id="loginTitle">Login</h3>
+
+									<div id="fb-root"></div>
+									<form id="loginForm" class="login-form-container">
+										<input id="username" type="email" placeholder="Email address" required />
+										<input id="password" type="password" placeholder="Password" required />
+
+										<input id="name" type="text" placeholder="Your name" style="display:none" />
+										<input id="pin" type="text" placeholder="5 digit pin" minlength="5" style="display:none" />
+										  <div id="loginButtons" >
+											<button id="loginButton" value="login">Login</button>
+											<a id="register" value="register">Create an Account</a>
+										  </div>
+
+								          <div id="registerButtons" style="display:none" >
+												<a id="registerBack" href="#" class="back">Back</a>
+									            <button type="submit" id="registerButton">Register</button>
+										  </div>
+
+										  <a id="facebook-connect-link" href="" class="facebook-connect-link" >Connect with Facebook</a>
+
+										<!--<p><fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button></p>-->
+
+
+									</form>
+								</div>
+						  </div>
+
+
+						  <div id="info-bar" class="info-bar" style="display:none">
+
+						   		<div id="levelProgress" style="width:200px;height:15px;margin-top:-7px;float:left"></div>
+
+							<div style="width:100px;float:right">
+							        <span class="class">&nbsp;</span>
+							        <span class="level" id="currentLevel">Level 1</span>
+							</div>
+
+							<div id="gameStatus" style="float:right;font-size:10px;margin-top:9px;color:#57B418"></div>
+
+						 </div>
+
+						  <div id="balance-box" style="display:none" class="balance-bar">
+								<h3>My current balance:</h3>
+
+								<span class="coins"><span id="wallet-evergreen-balance">0</span> <i>€</i></span>
+						        <span class="money"><span id="wallet-regional-currency-symbol">$</span><strong><span id="wallet-regional-currency-balance">0</span></strong><span id="wallet-regional-currency-code">USD</span></span>
+
+						 </div>
+
+						  <div id="video-box" class="video-bar" style="display:none">
+
+	<iframe id="video-player" width="380" height="225" src="http://www.youtube.com/embed/s3VZaZ95Z5k?rel=0" frameborder="0" allowfullscreen></iframe>
+						  </div>
+
+						 <div id="account-box" style="display:none" >
+
+							 <div id="account-bar"  class="balance-bar">
+								<h3>Account balance:</h3>
+
+								<span class="coins"><span id="account-evergreen-balance">0</span> <i>€</i></span>
+						        <span class="money"><span id="account-regional-currency-symbol">$</span><strong><span id="account-regional-currency-balance">0</span></strong><span id="account-regional-currency-code">USD</span></span>
+
+							</div>
+							 <div id="withdrawal-box" class="pay-bar">
+								<input id="withdrawalAmount" type="text" placeholder="Amount" required /><input id="withdrawalPin" type="text" placeholder="PIN" required /><button id="withdrawalButton"  type="submit">Withdraw</button>
+							</div>
+							 <div id="purchase-box" class="pay-bar" >
+								<input id="purchaseAmount" type="text" placeholder="Number of Greenz" required /><input id="regionalCurrencyPurchaseAmount" type="text" placeholder="0.00" required /><button id="purchaseCreditsButton"  type="submit">Order</button>
+
+							</div>
+
+						<div id="bitcoin" style="display:none" class="pay-bar">
+
+						<div id="coinbase-button"></div>
+							<!-- <a class="coinbase-button" data-code="1b94b83dfeffabf81c59c369e06aeac7" data-button-style="none" data-custom="facebook:123453" href="https://coinbase.com/checkouts/1b94b83dfeffabf81c59c369e06aeac7">Pay With Bitcoin</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>						</div> -->
+
+							 <button id="helloMonkey" type="submit" class="grey">Monkey</button>
+
+						</div>
+
+
+
+							<a id="currency-selector" style="margin-top:-5px;float:right">Change regional currency</a>
+						</div>
+
+
+							 <div id="wallet-box" style="display:none" class="list-item">
+								 Wallets
+								 <ul id="wallet-list" style="margin-top:10px">
+									  <li class="wallet">name. balance.</li>
+									  <li class="wallet">name. balance.</li>		
+								 </ul>
+							</div>
+
+							 <div id="currency-selector-box" class="curr-tab-content" style="display:none">
+								 <h3>My current balance:</h3>
+								 <div id="selected-currency" style="margin-top:5px">
+									 <div>Selected: <span id="selected-currency-name">US Dollars</span></div>
+									 <div>1 <img src="img/evg-credit-1-large-shadow.png" width="20px"> = <span id="selected-currency-rate">0.0022</span> </div>
+								 </div>
+
+								 <ul id="currency-list" class="curr-list">
+									  <li class="currency">name. rate. symbol. (select)</li>
+									  <li class="currency">name. rate. symbol. (select)</li>		
+								 </ul>
+							</div>
+
+
+				<div id="store-wrapper">
+
+						<div id="switch-store-box"  class="switch-store" style="display:none">
+					        <div class="store-form">
+					          <input  id="otherStoreEmail" type="text" placeholder="Email">
+					          <button id="loadStoreButton" type="submit" class="grey">></button>
+					        </div>
+				       </div><!-- / switch-store -->
+
+
+					<div id="store-item-add-box" class="item-add-bar"  style="display:none">
+						<div>
+				          <input id="new-item-description" type="text" placeholder="Item name" required>
+				          <input id="new-item-amount" type="text" placeholder="Amount" class="right-element" required>
+						</div>
+						<div class="second-row">
+				          <input id="new-item-url" type="text" placeholder="Video or image url" class="large-input" >
+				          <button id="addStoreItem" type="submit">Add item</button>
+						</div>
+
+			        </div><!-- / pay-bar -->
+
+					 <div id="store-box" class="list-item" style="display:none">
+						 <h3 id="storeTitle">My Store:</h3> 
+						 <ul id="store-item-list" >
+							  <li class="store-item" >item 1. amount.</li>
+							  <li class="store-item">item 2. amount.</li>		
+						 </ul>
+					</div>
+
+				</div>
+
+					 <div id="transaction-box" style="display:none;" class="list-item">
+						 <span id="all-transactions" class="list-expander">see all</span><span id="recent-transactions" style="display:none;" class="list-expander">see recent</span>
+
+						<h3>My recent transactions</h3>
+				        <ul id="transaction-list" style="margin-top:10px">
+				          <li>Greg Dlubacz <i>to</i> Joel Dietz EVG <strong>200</strong></li>
+				          <li>Greg Dlubacz <i>to</i> Jona <strong>99</strong></li>
+				          <li>Greg Dlubacz <i>to</i> S. Patrick <strong>500</strong></li>
+				        </ul>
+
+					</div>
+
+
+					 <div id="payment-box" style="display:none" class="pay-bar">
+
+						<input id="payee" type="email" placeholder="Enter name or email" required /><input id="amount" type="text" placeholder="Amount" required /><button id="paymentButton" value="login" type="submit">Send</button>
+					</div>
+					 <div id="user-box" style="display:none" class="list-item">
+						 <ul id="user-list">
+							  <li class="user">name. photo.</li>
+							  <li class="user">name. photo.</li>		
+						 </ul>
+					</div>
+
+
+						<!--<div id="footer" style="display:none">
+									<button id="logoutButton" value="login">Logout</button>
+									 <button id="loadStoreButton" value="store">Things to buy</button>
+									<button id="closeStoreButton" style="display:none">Hide Store</button>
+									<button id="AccountButton" value="store">Account</button>
+									<button id="closeAccountButton" style="display:none">Hide Account</button> 
+
+						</div> -->
+
+						 <div id="message-box" style="display:none" class="list-item">
+							<span id="all-messages" class="list-expander">see all</span><span id="recent-messages" style="display:none;" class="list-expander">see recent</span>
+							<h3>Recent messages</h3>   
+
+							 <ul id="message-list">
+								  <li class="message" >sender. message</li>
+							 </ul>
+						</div>
+
+
+
+			    </main>
+
+
+				<footer id="statusFooter" style="display:none">
+				  <span style="float:right;margin-top:10px;padding-right:5px;color:#95c036;display:none" id="logoutButton">Logout</span>
+			      <p class="status">Status: <span class="success" id="status">Please log in</span></p>
+			    </footer>
+
+				<footer id="devFooter" style="display:none">
+			      <p class="status">Dev Status: <span class="success" id="secondaryStatus"></span>&nbsp;<span id="playMode">play</span> | <span id="productionMode">prod</span></p>
+			    </footer>
+
+  </body>
+</html>
+

@@ -1,0 +1,59 @@
+
+	#container {
+		padding-left:50px;
+		padding-top:50px;
+	}
+
+	h2 { color: rgb(180, 237, 152);
+	 size: 14px
+	}
+
+	pre .tag, code .tag {
+	color: rgb(179, 245, 170)
+	}
+	
+	pre .atv, code .atv {
+	color: #FFF;
+	}
+	
+	pre .atn, code .atn {
+	color: #74E3F7;
+	}
+	
+	.ui-dialog-title {
+	    display:none;
+	}
+
+	.ui-dialog-titlebar {
+	    background:transparent;
+	    border:none;
+	}
+
+	.ui-dialog .ui-dialog-titlebar-close {
+	    right:0;
+	}
+	
+	.triangle-isosceles {
+	  position: relative;
+	  padding: 15px;
+	  margin: 1em 0 3em;
+	  color: #000;
+	  background: #BEFFBB;
+	  border-radius: 10px;
+	  background: linear-gradient(top, #f9d835, #f3961c);
+	}
+
+	/* creates triangle */
+	.triangle-isosceles:after {
+	  content: "";
+	  display: block; /* reduce the damage in FF3.0 */
+	  position: absolute;
+	  bottom: -15px;
+	  left: 50px;
+	  width: 0;
+	  border-width: 15px 15px 0;
+	  border-style: solid;
+	  border-color: #BEFFBB transparent;
+	}
+	
+

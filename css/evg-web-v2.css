@@ -1,0 +1,2182 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'ProcionoRegular';
+    src: url('../fonts/Prociono-Regular-webfont.eot');
+    src: url('../fonts/Prociono-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Prociono-Regular-webfont.woff') format('woff'),
+         url('../fonts/Prociono-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Prociono-Regular-webfont.svg#ProcionoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaWorldBold';
+    src: url('../fonts/helvetica_world_bold.eot');
+    src: url('../fonts/helvetica_world_bold.eot') format('embedded-opentype'),
+         url('../fonts/helvetica_world_bold.woff') format('woff'),
+         url('../fonts/helvetica_world_bold.ttf') format('truetype'),
+         url('../fonts/helvetica_world_bold.svg#HelveticaWorldBold') format('svg');
+}
+
+@font-face {
+    font-family: 'JournalRegular';
+    src: url('../fonts/journal-webfont.eot');
+    src: url('../fonts/journal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/journal-webfont.woff') format('woff'),
+         url('../fonts/journal-webfont.ttf') format('truetype'),
+         url('../fonts/journal-webfont.svg#JournalRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    font-family: 'ProcionoRegular', serif, georgia;
+    font-size: 17px;
+    color: #2e2c21;
+    background: #2e2c21 url(../img/bg_landing_nele2.jpg) center 0 repeat-x;
+    background-size: 1600px auto;
+    -webkit-transition: background 2s ease-out; 
+    -moz-transition: background 2s ease-out; 
+    -o-transition: background 2s ease-out; 
+    transition: background 2s ease-out; 
+}
+
+body.big {
+    background-size: 2400px auto;
+}
+
+.ie8 body {
+    background: url(../img/bg_landing_nele2.jpg) center 0 repeat-x;
+}
+
+a {
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out; 
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+.landing .white-background p {
+    background: none;
+    padding: 0;
+    color: #fff;
+}
+
+.landing .white-background p a,
+.landing .white-background p span {
+    color: #fff;
+}
+
+.landing .white-background p a {
+    text-decoration: underline;
+}
+
+.white-background p {
+    margin: 0;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	color: #000;
+	padding: 8px 8px 15px 15px;
+	border-radius:10px;
+	background: #fff; /* fallback for browsers that don't understand rgba */
+	border: #solid 10px #000; /* fallback for browsers that don't understand rgba */
+	background-color: rgba(255,255,255,0.65); 
+	border-color: solid 10px rgba(0,0,0,0.2); /*Very transparent black*/
+	margin-bottom: 5px;
+	
+}
+
+div .white-background-div {
+    margin: 0;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	color: #000;
+	padding: 8px 8px 15px 15px;
+	border-radius:10px;
+	background: #fff; /* fallback for browsers that don't understand rgba */
+	border: #solid 10px #000; /* fallback for browsers that don't understand rgba */
+	background-color: rgba(255,255,255,0.65); 
+	border-color: solid 10px rgba(0,0,0,0.2); /*Very transparent black*/
+	margin-bottom: 5px;
+	
+}
+
+
+#head {
+    padding-top: 30px;
+    overflow: hidden;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-box-sizing: border-box;
+}
+
+.logo {
+    display: block;
+    float: left;
+}
+
+.download-link {
+    float: right;
+    color: #fff;
+    font-size: 16.67px;
+    line-height: 44px;
+    text-decoration: underline;
+}
+
+.download-link:hover {
+    color: #95e076;
+}
+
+.social-links {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links > li {
+    float: left;
+    margin-left: 19px;
+}
+
+.social-links > li > a {
+    display: block;
+    height: 34px;
+    padding: 0 28px;
+    border-radius: 20px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 14px;
+    line-height: 34px;
+    color: #fff;
+    background-color: #4d4b42;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#4d4b42), to(#27251c));
+    background-image: -webkit-linear-gradient(top, #4d4b42, #27251c);
+    background-image:    -moz-linear-gradient(top, #4d4b42, #27251c);
+    background-image:      -o-linear-gradient(top, #4d4b42, #27251c);
+    background-image:         linear-gradient(to bottom, #4d4b42, #27251c);
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+.social-links > li > a:hover {
+    text-decoration: none;
+}
+
+.social-links > li.fb > a {
+    width: 34px;
+    padding: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+.social-links > li.fb > a > i {
+    display: block;
+    background: url(../img/ico_fb.png) 12px 9px no-repeat;
+}
+
+.social-links > li.tw > a {
+    width: 34px;
+    padding: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+.social-links > li.tw > a > i {
+    display: block;
+    background: url(../img/ico_tw.png) 11px 10px no-repeat;
+}
+
+.social-links > li.tu > a {
+    width: 34px;
+    padding: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+.social-links > li.tu {
+    margin-right: 19px;
+}
+
+.social-links > li.tu > a > i {
+    display: block;
+    background: url(../img/ico_tu.png) 10px 8px no-repeat;
+}
+
+h1 {
+    margin: 47px 0 46px;
+    font-size: 58px;
+    line-height: 57px;
+    color: #fff;
+}
+
+h1 strong {
+    display: block;
+    font-size: 83px;
+    font-weight: normal;
+}
+
+#main {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-box-sizing: border-box;
+}
+
+#main p strong {
+    color: #fff;
+}
+
+#main p strong span {
+    float: left;
+    height: 54px;
+    margin-top: -8px;
+    font-size: 45px;
+}
+/*
+ * SLider
+ */
+ #main-slider {
+    height: 520px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+
+#main-slider li {
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+
+.bx-wrapper {
+    position: relative;
+}
+
+.bx-prev,
+.bx-next {
+    display: block;
+    position: absolute;
+    top: 278px;
+    width: 77px;
+    height: 153px;
+    z-index: 100;
+    overflow: hidden;
+    text-indent: -9999em;
+    outline: none;
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out; 
+}
+
+.bx-next:focus,
+.bx-prev:focus {
+    outline: none;
+}
+
+.bx-prev {
+    left: 20px;
+    background: url(../img/misc_prev.png) 0 0 no-repeat;
+}
+
+.bx-next {
+    right: 20px;
+    background: url(../img/misc_next.png) 0 0 no-repeat;
+}
+.bx-prev:hover,
+.bx-next:hover {
+    opacity: 0.8;
+}
+
+.bx-pager.bx-default-pager {
+    display: none;
+}
+
+.iphone_black,
+.iphone_black:focus {
+    display: block;
+    position: absolute;
+    width: 329px;
+    height: 757px;
+    padding: 150px 76px 0 89px;
+    bottom: -900px;
+    left: 50%;
+    margin-left: -247px;
+    z-index: 9;
+    outline: none;
+    background: url(../img/pic_iphone_black.png) no-repeat;
+    background-size: contain;
+    -webkit-transition: all 0.5s ease-out; 
+    -moz-transition: all 0.5s ease-out; 
+    -o-transition: all 0.5s ease-out; 
+    transition: all 0.5s ease-out; 
+}
+
+.iphone_black:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 494px;
+    height: 907px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: url(../img/glare.png) no-repeat;
+    background-size: contain;
+    -webkit-transition: all 0.5s ease-out; 
+    -moz-transition: all 0.5s ease-out; 
+    -o-transition: all 0.5s ease-out; 
+    transition: all 0.5s ease-out; 
+}
+
+.iphone_black img {
+    width: 100%;
+    height: auto;
+}
+
+.inview .iphone_black {
+    bottom: -475px;
+}
+
+.inview .iphone_black:hover {
+    opacity: 1;
+    bottom: -400px;
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    z-index: 11;
+    margin: 53px -1400px 0 0;
+    font-family: 'JournalRegular', serif, georgia;
+    font-size: 30px;
+    color: #fff;
+    -webkit-transition: all 1s ease-out; 
+    -moz-transition: all 1s ease-out; 
+    -o-transition: all 1s ease-out; 
+    transition: all 1s ease-out;
+}
+
+.inview .title {
+    margin: 60px 579px 0 0;
+}
+
+.title:after {
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    right: -75px;
+    width: 67px;
+    height: 53px;
+    content:"";
+    background: url(../img/ico_arrow_down.png) 0 0 no-repeat;
+    -webkit-transition: all 1s ease-out; 
+    -moz-transition: all 1s ease-out; 
+    -o-transition: all 1s ease-out; 
+    transition: all 1s ease-out;
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+
+.inview .title:after {
+    opacity: 1;
+}
+
+.play {
+    display: block;
+    position: relative;
+    z-index: 10;
+    width: 78px;
+    height: 76px;
+    margin: 22% auto;
+    text-indent: -9999em;
+    overflow: hidden;
+    background: url(../img/ico_play.png) 0 0 no-repeat;
+}
+
+#download {
+    box-shadow: inset 0 21px 21px rgba(0, 0, 0, 0.2);
+    background: url(../img/bg_download.jpg);
+}
+
+#download .container {
+    padding-top: 71px;
+    min-height: 411px;
+    background: url(../img/pic_vine.png) center 100% no-repeat;
+ }
+
+h2 {
+    margin: 0 0 53px;
+    font-size: 29px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+h2 span {
+    color: #669927;
+}
+
+h3 {
+    margin: 0 0 18px;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+h3 span {
+    color: #669927;
+}
+
+#download .span4 {
+    text-align: center;
+}
+
+#download a {
+    display: block;
+    width: 200px;
+    height: 66px;
+    margin: 90px 0 0 0;
+    color: #fff;
+    outline: none;
+    border-radius: 33px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.35);
+    background-color: #666352;
+    background-image: -webkit-gradient(linear, top, bottom, from(#666352), to(#4a4737));
+    background-image: -webkit-linear-gradient(top, #666352, #4a4737);
+    background-image:    -moz-linear-gradient(top, #666352, #4a4737);
+    background-image:      -o-linear-gradient(top, #666352, #4a4737);
+    background-image:         linear-gradient(to bottom, #666352, #4a4737);
+}
+
+#download a:hover,
+#download a:visited,
+#download a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+#download a i {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 100%;
+    margin-right: 32px;
+    margin-left: 35px;
+    text-indent: -9999em;
+    background: url(../img/ico_phone.png) 0px 14px no-repeat;
+}
+
+#download a p {
+    display: block;
+    float: left;
+    width: 75px;
+    margin-top: 11px;
+    overflow: hidden;
+    line-height: 22px;
+    text-align: left;
+}
+
+/*
+ *Footer
+ */
+
+#foot {
+    line-height: 58px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 12px;
+    color: #575748;
+    background-color: #fff;
+}
+
+#foot p {
+    margin: 0;
+    color: #575748;
+}
+
+#foot .copyrights {
+    float: left;
+}
+
+#foot .social-media {
+    float: right;
+}
+
+#foot .social-media p {
+    float: left;
+}
+
+#foot .social-media ul {
+    float: right;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+#foot .social-media li {
+    float: left;
+    margin-left: 20px;
+}
+
+#foot .social-media li a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+#foot .social-media .fb a {
+    background: url(../img/ico_fb_grey.png) center 0 no-repeat;
+}
+
+#foot .social-media .tw a {
+    background: url(../img/ico_tw_grey.png) center 0 no-repeat;
+}
+
+
+/*
+ * Popup login
+ */
+
+ .modal {
+    border: 1px solid #B2B2B2;
+ }
+
+ .modal .close {
+    width: 24px;
+    height: 26px;
+    margin-top: -43px;
+    text-indent: -9999em;
+    background: url(../img/ico_close.png) 0 0 no-repeat;
+}
+
+.modal.login {
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.modal iframe {
+    width: 100%;
+}
+
+.modal-backdrop {
+    background: none;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+}
+
+.modal.fade {
+    top: -200%;
+    display: block !important;
+    opacity: 1;
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    -o-transform: scale(0.1);
+    transform: scale(0.1);
+    -webkit-transition: -webkit-transform 2.5s ease-in-out;
+    -moz-transition: -moz-transform 2.5s ease-in-out;
+    -o-transition: -o-transform 2.5s ease-in-out;
+    transition: transform 2.5s ease-in-out;
+}
+
+.modal.fade.scale {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.modal.fade.top {
+    top: 200px;
+}
+
+.login span {
+    display: block;
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    margin-left: -69px;
+    width: 139px;
+    height: 154px;
+    background: url(../img/popup_logo.png) 0 0 no-repeat;
+}
+
+
+
+.login form input {
+    width: 90%;
+    height: 68px;
+    margin-bottom: 18px;
+    padding: 0 5%;
+    border: none;
+    border-radius: 34px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 15px;
+    color: #5c5c4c;
+    background-color: #0d0a07;
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.15);
+}
+
+.login form button {
+    width: 100%;
+    height: 68px;
+    padding: 0;
+    border: none;
+    border-radius: 34px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 21px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.30);
+    background: url(../img/bg_login_btn.jpg) 0 0 repeat-x;
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out; 
+}
+
+.login form button:hover {
+    opacity: 0.8;
+}
+
+.landing .btn-fb {
+    display: block;
+    width: 230px;
+    height: 45px;
+    margin: 0 auto;
+    text-indent: -9999em;
+    background: url(../img/btn_fb.png) 0 0 no-repeat;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.landing .btn-fb:hover {
+    background-position: 0 -45px;
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+/* Large desktop */
+@media (min-width: 1600px) {
+    body {
+        background-size: 100% auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal {
+        position: absolute;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    #main-slider {
+        height: 555px;
+    }
+    #download a {
+        margin: 90px 0 0;
+    }
+    .landing .span7 {
+        width: auto;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .modal {
+        position: absolute;
+    }
+    #head,
+    #download,
+    #foot {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #main-slider {
+        height: 508px;
+    }
+    .iphone_black,
+    .inview .iphone_black {
+        width: 267px;
+        margin-left: -200px;
+        padding: 122px 61px 0 72px;
+    }
+    .iphone_black:after {
+        width: 400px;
+    }
+    .inview .title {
+        margin: 135px 340px 0 0;
+    }
+    #download a {
+        float: none;
+        margin: 0 auto;
+    }
+    #download a.pull-left {
+        margin-bottom: 20px;
+    }
+    #foot {
+        line-height: 35px;
+        text-align: center;
+    }
+    #foot .copyrights {
+        float: none;
+        margin-top: 10px;
+        line-height: 13px;
+    }
+    #foot .social-media {
+        float: none;
+        margin-bottom: 20px;
+    }
+    #foot .social-media p {
+        float: none;
+    }
+    #foot .social-media ul {
+        float: none;
+        margin: 0 auto;
+        width: 100px;
+    }
+    .modal.fade.in {
+        top: 68px;
+    }
+    .modal.fade.top {
+        top: 68px;
+    }
+    .bx-prev, 
+    .bx-next {
+      -webkit-transform: scale(0.8); 
+         -moz-transform: scale(0.8); 
+          -ms-transform: scale(0.8); 
+           -o-transform: scale(0.8); 
+              transform: scale(0.8); 
+    }
+    .bx-prev {
+        left: 0;
+    }
+    .bx-next {
+        right: 0;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    #head {
+        padding-top: 10px;
+    }
+    .logo {
+        float: none;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .social-links {
+        float: none;
+        display: table;
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .social-links > li {
+        margin-left: 0;
+    }
+    h1 {
+        margin: 64px 0 24px;
+        font-size: 44px;
+        line-height: 43px;
+        text-align: center;
+    }
+    h1 strong {
+        font-size: 57px;
+    }
+    #main-slider {
+        height: 350px;
+    }
+    .bx-prev, 
+    .bx-next {
+        top: 114px;
+        -webkit-transform: scale(0.5); 
+         -moz-transform: scale(0.5); 
+          -ms-transform: scale(0.5); 
+           -o-transform: scale(0.5); 
+              transform: scale(0.5);
+    }
+    .bx-prev {
+        left: -30px;
+    }
+    .bx-next {
+        right: -30px;
+    }
+    .inview .title {
+        margin-top: 25px;
+    }
+    .iphone_black,
+    .inview .iphone_black {
+        width: 201px;
+        margin-left: -150px;
+        padding: 91px 45px 0 54px;
+    }
+    .iphone_black:after {
+        width: 300px;
+    }
+    .inview .iphone_black {
+        bottom: -558px;
+    }
+    .inview .iphone_black:hover {
+        bottom: -500px;
+    }
+    .modal {
+        right: 0;
+        left: 0;
+    }
+    .download-link {
+        display: block;
+        float: none;
+        text-align: center;
+    }
+    h1 {
+        color: #fff;
+    }
+}
+
+
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    vertical-align: top;
+}
+
+.fancybox-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8020;
+}
+
+.fancybox-skin {
+    position: relative;
+    background: #f9f9f9;
+    color: #444;
+    text-shadow: none;
+    -webkit-box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.6);
+       -moz-box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.6);
+}
+
+.fancybox-opened {
+    z-index: 8030;
+}
+
+.fancybox-opened .fancybox-skin {
+    -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+       -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.fancybox-outer, .fancybox-inner {
+    position: relative;
+}
+
+.fancybox-inner {
+    overflow: hidden;
+}
+
+.fancybox-type-iframe .fancybox-inner {
+    -webkit-overflow-scrolling: touch;
+}
+
+.fancybox-error {
+    color: #444;
+    font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.fancybox-image, .fancybox-iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.fancybox-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-image: url('../img/fancybox_sprite.png');
+}
+
+#fancybox-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -22px;
+    margin-left: -22px;
+    background-position: 0 -108px;
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 8060;
+}
+
+#fancybox-loading div {
+    width: 44px;
+    height: 44px;
+    background: url('../img/fancybox_loading.gif') center center no-repeat;
+}
+
+.fancybox-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 8040;
+}
+
+.fancybox-nav {
+    position: absolute;
+    top: -50px;
+    width: 40%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent url('../img/blank.gif'); /* helps IE */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    z-index: 8040;
+}
+
+.fancybox-prev {
+    left: 0;
+}
+
+.fancybox-next {
+    right: 0;
+}
+
+.fancybox-nav span {
+    position: absolute;
+    top: 50%;
+    width: 36px;
+    height: 34px;
+    margin-top: -18px;
+    cursor: pointer;
+    z-index: 8040;
+    visibility: hidden;
+}
+
+.fancybox-prev span {
+    left: 10px;
+    background-position: 0 -36px;
+}
+
+.fancybox-next span {
+    right: 10px;
+    background-position: 0 -72px;
+}
+
+.fancybox-nav:hover span {
+    visibility: visible;
+}
+
+.fancybox-tmp {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+    visibility: hidden;
+    max-width: 99999px;
+    max-height: 99999px;
+    overflow: visible !important;
+}
+
+/* Overlay helper */
+
+.fancybox-lock {
+    overflow: hidden !important;
+    width: auto;
+}
+
+.fancybox-lock body {
+    overflow: hidden !important;
+}
+
+.fancybox-lock-test {
+    overflow-y: hidden !important;
+}
+
+.fancybox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+    z-index: 8010;
+    background: transparent;
+}
+
+.fancybox-overlay-fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+/* Title helper */
+
+.fancybox-title {
+    visibility: hidden;
+    font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    position: relative;
+    text-shadow: none;
+    z-index: 8050;
+}
+
+.fancybox-opened .fancybox-title {
+    visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    margin-bottom: -35px;
+    z-index: 8050;
+    text-align: center;
+}
+
+.fancybox-title-float-wrap .child {
+    display: inline-block;
+    margin-right: -100%;
+    padding: 2px 20px;
+    background: transparent; /* Fallback for web browsers that doesn't support RGBa */
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-border-radius: 15px;
+       -moz-border-radius: 15px;
+            border-radius: 15px;
+    text-shadow: 0 1px 2px #222;
+    color: #FFF;
+    font-weight: bold;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+.fancybox-title-outside-wrap {
+    position: relative;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.fancybox-title-inside-wrap {
+    padding-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 10px;
+    background: #000;
+    background: rgba(0, 0, 0, .8);
+}
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5){
+
+    #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+        background-image: url('../img/fancybox_sprite@2x.png');
+        background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
+    }
+
+    #fancybox-loading div {
+        background-image: url('../img/fancybox_loading@2x.gif');
+        background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*
+ * Extra additions.
+ * 
+ */
+
+.button-style {
+    display: block;
+    height: 72px;
+    padding: 0 28px;
+    border-radius: 20px;
+    font-family: 'HelveticaWorldBold', sans-serif, arial;
+    font-size: 25px;
+	text-align: center;
+    line-height: 72px;
+    color: #fff;
+    background-color: #4d4b42;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#4d4b42), to(#27251c));
+    background-image: -webkit-linear-gradient(top, #4d4b42, #27251c);
+    background-image:    -moz-linear-gradient(top, #4d4b42, #27251c);
+    background-image:      -o-linear-gradient(top, #4d4b42, #27251c);
+    background-image:         linear-gradient(to bottom, #4d4b42, #27251c);
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+.button-style a:hover {
+    text-decoration: none;
+}
+
+.button-green {
+    display: block;
+    border: 1px solid #000;
+    font-size: 28px;
+    line-height: 51px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #a4c830;
+    text-align: center;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.25), 0 2px 0 rgba(0, 0, 0, 0.25);
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#a4c830), to(#325508));
+    background-image: -webkit-linear-gradient(top, #a4c830, #325508);
+    background-image:    -moz-linear-gradient(top, #a4c830, #325508);
+    background-image:      -o-linear-gradient(top, #a4c830, #325508);
+    background-image:         linear-gradient(to bottom, #a4c830, #325508);
+    border-radius: 4px;
+}
+
+.button-green:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
+/* Light Body */
+a.btn-light {
+    display: block;
+    width: 196px;
+    height: 42px;
+    margin: 0 auto 72px;
+    border: 1px solid #afafaf;
+    font-size: 16px;
+    color: #afafaf !important;
+    line-height: 42px;
+    text-decoration: none !important;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a.btn-light:hover {
+    color: #010101 !important;
+    border-color: #010101 !important;
+}
+
+body.light {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body.light #head {
+    position: relative;
+    height: 105px;
+    background: #f2f2f2;
+}
+
+body.light #head .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -22px 0 0 -19px;
+    width: 38px;
+    height: 44px;
+    background: url(../img/logo_light.png);
+}
+
+body.light #head .logo img {
+    display: none;
+}
+
+body.light #head .social-links,
+body.light #head .download-link {
+    display: none;
+}
+
+body.light #main,
+body.light #download {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body.light #main.faq {
+    position: relative;
+}
+
+body.light #main.faq:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 175px;
+    height: 1px;
+    background: #f2f2f2;
+}
+
+body.light #main a,
+body.light #main a:visited {
+    color: #95c036;
+    text-decoration: underline;
+}
+
+body.light #main a:hover,
+body.light #main a:active {
+    color: #95c036;
+    text-decoration: none;
+}
+
+body.light #main {
+    position: relative;
+    text-shadow: none;
+    padding-top: 80px;
+    padding-bottom: 175px;
+    background: #fff;
+}
+
+body.light #main dt {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body.light #main dd {
+    font-size: 15px;
+    line-height: 24px;
+    margin: 0 0 45px;
+    color: #717171;
+}
+
+a.back-light {
+    position: absolute;
+    bottom: 65px;
+    display: inline-block;
+    padding-left: 26px;
+    font-size: 15px;
+    color: #717171 !important;
+    line-height: 42px;
+    text-decoration: none !important;
+    background: url(../img/arrow_back.png) 0 center no-repeat;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+a.back-light:hover {
+    color: #010101 !important;
+}
+
+body.light .landing .container {
+    visibility: hidden;
+}
+
+
+
+
+/* Wallet Styles */
+#evergreen-wallet p {
+  margin: 13px 0;
+}
+
+#evergreen-wallet a,
+#evergreen-wallet a:visited,
+#evergreen-wallet a:hover,
+#evergreen-wallet a:active {
+  color: #5c781f;
+  text-decoration: none;
+}
+
+#evergreen-wallet {
+  /*position: fixed;
+  top: 30px;
+  right: 25px;*/
+  width: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #898989;
+  /*border: 1px solid #b2b2b2;*/
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.18), 0 0 10px rgba(0, 0, 0, 0.06);
+  z-index: 1001;
+}
+
+#evergreen-wallet .ew-wrap {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/*#evergreen-wallet:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  right: 27px;
+  width: 17px;
+  height: 9px;
+  background: url(../img/misc_arrow.png);
+}*/
+
+#evergreen-wallet input[type="text"],
+#evergreen-wallet input[type="email"],
+#evergreen-wallet input[type="password"] {
+  display: inline-block;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #a8a8a8;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #898989;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.33);
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#evergreen-wallet button {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #7da327;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #5c781f;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.35), 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c1dd6e), to(#91bd32));
+  background-image: -webkit-linear-gradient(top, #c1dd6e, #91bd32);
+  background-image: -moz-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: -o-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: linear-gradient(to bottom, #c1dd6e, #91bd32);
+}
+
+#evergreen-wallet button.grey {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f1f5), to(#e2e4ec));
+  background-image: -webkit-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: -moz-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: -o-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: linear-gradient(to bottom, #f0f1f5, #e2e4ec);
+  border-color: #aaa;
+  color: #8c90a2;
+}
+
+#evergreen-wallet header {
+  position: relative;
+  height: 55px;
+  border-bottom: 1px solid #b5b5b5;
+  background: url(../wallet/img/bg_head.png);
+}
+
+#evergreen-wallet .logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 27px;
+  height: 34px;
+  margin: -17px 0 0 -13.5px;
+  text-indent: -9999em;
+  outline: 0;
+  background: url(../wallet/img/logo.png);
+}
+
+#evergreen-wallet .action-icons {
+  float: right;
+  margin: 0 10px 0 0;
+  padding: 0;
+  line-height: 55px;
+  font-weight: bold;
+  list-style: none;
+}
+
+#evergreen-wallet .action-icons li {
+  float: left;
+  line-height: 55px;
+}
+
+#evergreen-wallet .action-icons a {
+  display: block;
+  padding: 0 0 0 8px;
+}
+
+#evergreen-wallet #evergreen-wallet .action-icons a:hover {
+  color: #4b4b4b;
+}
+
+#evergreen-wallet .action-icons .ico-cart {
+  width: 32px;
+  height: 55px;
+  padding: 0;
+  text-indent: -9999em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../wallet/img/ico_cart.png);
+}
+
+#evergreen-wallet .action-icons .active .ico-cart,
+#evergreen-wallet .action-icons .ico-cart:hover {
+  background-image: url(../wallet/img/ico_cart_active.png);
+}
+
+#evergreen-wallet .action-icons .ico-lock {
+  width: 32px;
+  height: 55px;
+  padding: 0;
+  text-indent: -9999em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../wallet/img/ico_lock.png);
+}
+
+#evergreen-wallet .action-icons .ico-user {
+  width: 32px;
+  height: 55px;
+  padding: 0;
+  text-indent: -9999em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../wallet/img/ico_user.png);
+}
+
+#evergreen-wallet .action-icons .active .ico-user,
+#evergreen-wallet .action-icons .ico-user:hover {
+  background-image: url(../wallet/img/ico_user_active.png);
+}
+
+#evergreen-wallet main {
+  padding: 0 20px;
+  background: #fff;
+}
+
+#evergreen-wallet h3 {
+  margin: 0 0 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #4b4b4b;
+  text-shadow: none;
+}
+
+#evergreen-wallet .balance-bar {
+  margin: 0 -20px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #cfd9b8;
+  background: #eff6df;
+}
+
+#evergreen-wallet .balance-bar h3 {
+    text-align: left
+}
+
+#evergreen-wallet .balance-bar .coins {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 28px;
+  color: #95c036;
+}
+
+#evergreen-wallet .balance-bar .coins i {
+  display: inline-block;
+  width: 22px;
+  height: 30px;
+  text-indent: -9999em;
+  background: url(../wallet/img/ico_coin.png) center 70% no-repeat;
+}
+
+#evergreen-wallet .balance-bar .money {
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4b4b4b;
+}
+
+#evergreen-wallet .balance-bar .money strong {
+  font-size: 30px;
+}
+
+#evergreen-wallet .list-item {
+  padding-top: 15px;
+}
+
+#evergreen-wallet .list-item h3 {
+  text-align: left;
+}
+
+#evergreen-wallet .list-item ul {
+  margin: -10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#evergreen-wallet .list-item li {
+  margin: 0 -20px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ededed;
+  line-height: 21px;
+}
+
+#evergreen-wallet .list-item li i {
+  display: inline-block;
+  width: 10px;
+  height: 21px;
+  margin: 0 18px;
+  text-indent: -9999em;
+  background: url(../wallet/img/ico_arrow.png) center center no-repeat;
+}
+
+#evergreen-wallet .list-item li strong {
+  float: right;
+  color: #95c036;
+}
+
+#evergreen-wallet .pay-bar {
+  padding: 20px 0;
+}
+
+#evergreen-wallet .pay-bar input:first-child {
+  width: 170px;
+  margin-right: 10px;
+}
+
+#evergreen-wallet .pay-bar input {
+  width: 80px;
+}
+
+#evergreen-wallet .pay-bar button {
+  float: right;
+}
+
+#evergreen-wallet footer {
+  overflow: hidden;
+  border-top: 1px solid #c4c4c4;
+  background: #f5f5f5;
+  text-align: center;
+  box-shadow: inset 0 2px 2px rgba( 0, 0, 0, 0.05);
+}
+
+#evergreen-wallet .success {
+  color: #95c036;
+}
+
+#evergreen-wallet .error {
+  color: #fc8888;
+}
+
+#evergreen-wallet .login-form {
+  padding: 25px 60px 30px;
+}
+
+#evergreen-wallet .login-form h3 {
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+  color: #95c036;
+  text-shadow: none;
+}
+
+#evergreen-wallet .login-form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#evergreen-wallet .login-form a {
+  display: inline-block;
+  padding: 0 10px;
+  font-weight: bold;
+  line-height: 32px;
+  color: #5c781f;
+}
+
+#evergreen-wallet .login-form a.fb-connect {
+  padding: 0;
+  display: block;
+}
+
+#evergreen-wallet .login-form .back {
+  width: 21px;
+  text-indent: -9999em;
+  background: url(../wallet/img/arrow_back.png) center center no-repeat;
+}
+
+#evergreen-wallet .login-form button {
+  float: right;
+  height: 32px;
+}
+
+#evergreen-wallet .login-form em {
+  display: block;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#evergreen-wallet .switch-store {
+  margin: 0 -20px;
+  padding: 15px 20px 20px;
+  border-bottom: 1px solid #d6d9e0;
+  background: #f3f4f6;
+}
+
+#evergreen-wallet .switch-store h3 {
+    text-align: left;
+}
+
+#evergreen-wallet .switch-store input {
+  width: 270px;
+}
+
+#evergreen-wallet .switch-store button {
+  float: right;
+}
+
+#evergreen-wallet .up {
+  display: block;
+  height: 30px;
+  margin: 0 -20px;
+  text-indent: -9999em;
+  border-top: 1px solid #c4c4c4;
+  background: #e9e9e9 url(../wallet/img/arrow_up.png) center center no-repeat;
+}
+
+#evergreen-wallet .expander {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  border: 1px solid #c1c1c1;
+  text-indent: -9999em;
+  border-radius: 18px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.11);
+  background: url(../wallet/img/arrow_right.png) center center no-repeat;
+}
+
+#evergreen-wallet .expander.on {
+  background: url(../wallet/img/arrow_down.png) center center no-repeat;
+}
+
+#evergreen-wallet .expanded {
+  display: none;
+}
+
+#evergreen-wallet .expanded dl,
+#evergreen-wallet .expanded dt,
+#evergreen-wallet .expanded dd {
+  margin: 0;
+  padding: 0;
+}
+
+#evergreen-wallet .expanded dt {
+  float: left;
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+#evergreen-wallet .fb-connect {
+  display: block;
+  width: 241px;
+  height: 42px;
+  margin: 0 auto;
+  text-indent: -9999em;
+  background: url(../wallet/img/btn_fb.png) no-repeat;
+}
+
+#evergreen-wallet .list-item .list-btn {
+  float: right;
+  margin-left: 10px;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  font-weight: bold;
+  padding: 0 12px;
+  color: #fff;
+  background: #85b619;
+  border-radius: 2px;
+}
+
+#evergreen-wallet .curr-change .curr-tab {
+  display: block;
+  margin: 0 -20px;
+  padding: 0 20px;
+  line-height: 30px;
+  background: #f5f5f5;
+  font-weight: bold;
+  text-align: right;
+  color: #4b4b4b;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+#evergreen-wallet .curr-change .curr-tab span {
+  display: inline-block;
+  padding-left: 26px;
+  background: url(../wallet/img/arrow_change.png) 0 center no-repeat;
+}
+
+#evergreen-wallet .curr-tab-content {
+  padding-top: 15px;
+}
+
+#evergreen-wallet .curr-tab-content h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+#evergreen-wallet .curr-tab-content ol {
+  margin: 0 0 18px;
+  padding: 0 0 0 20px;
+  line-height: 26px;
+}
+
+#evergreen-wallet .curr-tab-content dl,
+#evergreen-wallet .curr-tab-content dt,
+#evergreen-wallet .curr-tab-content dd {
+  margin: 0;
+  padding: 0;
+}
+
+#evergreen-wallet .curr-tab-content dt {
+  float: left;
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+#evergreen-wallet .curr-tab-content dl {
+  margin-bottom: 5px;
+}
+
+#evergreen-wallet .ico-ever {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  text-indent: -9999em;
+  background: url(../wallet/img/ico_ever.png) no-repeat;
+}
+
+#evergreen-wallet .curr-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#evergreen-wallet .curr-list li {
+  height: 47px;
+  line-height: 47px;
+  border-bottom: 1px solid #ededed;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+#evergreen-wallet .curr-list li:first-child {
+  border-top: 1px solid #ededed;
+}
+
+#evergreen-wallet .curr-list .active {
+  font-weight: bold;
+}
+
+#evergreen-wallet .curr-list a {
+  display: inline-block;
+  width: 18px;
+  text-indent: -9999em;
+  background: url(../wallet/img/checkbox.png) 0  center no-repeat;
+}
+
+#evergreen-wallet .curr-list .active a {
+  background: url(../wallet/img/checkbox_checked.png) 0 center no-repeat;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+@media (max-width: 480px) {
+  #evergreen-wallet button {
+    width: 60px;
+    font-size: 12px;
+  }
+  #evergreen-wallet .pay-bar input:first-child {
+    width: 120px;
+    margin-right: 5px;
+  }
+  #evergreen-wallet .switch-store input {
+    width: 210px;
+  }
+  #evergreen-wallet .login-form {
+    padding: 25px 20px 30px;
+  }
+}

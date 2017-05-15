@@ -1,0 +1,19 @@
+
+	#container {
+		padding-left:50px;
+		padding-top:50px;
+	}
+
+	h2 { color: rgb(180, 237, 152);
+	 size: 14px
+	}
+
+	pre .tag, code .tag {
+	color: rgb(179, 245, 170)
+	}
+	pre .atv, code .atv {
+	color: #FFF;
+	}
+	pre .atn, code .atn {
+	color: #74E3F7;
+	}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Evergreen Wallet</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+      #balance-box {
+        width: 100%;
+      }
+
+      #transaction-list {
+        width: 100%;
+      }
+
+      .transaction-item {
+        padding-left: 30px;
+      }
+
+    </style>
+
+  </head>
+
+
+  <body>
+	  <div id="login">
+			<div id="register">register</div>
+			<div id="loginButton">login</div>
+			<div id="fbLogin"><img id="fb-login" src="img/fb-btn-normal.png"/></div>
+	  </div><BR/>
+	
+	  <div>Status <div id="status"></div></div><BR/>
+	
+	  <div>My current balance</div><BR/>
+	
+	  <div id="balance-box">
+		<div class="col-md-6" ><span id="evergreen-balance">0</span> <img src="img/evg-credit-1-large-shadow.png" width="30px"> </div>
+	    <div class="col-md-6" >$<span id="regional-currency-balance" > 0.00</span> USD</div>
+	  </div>
+	
+	 <div id="transaction-box">
+		Recent transactions
+		 <div id="transaction-list" style="margin-top:10px">
+			  <div class="transaction-item" >item 1. amount.</div>
+			  <div class="transaction-item">item 2. amount.</div>		
+		 </div>
+	</div>
+	
+	  
+  </body>
+</html>
+

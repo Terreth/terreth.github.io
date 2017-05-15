@@ -1,0 +1,528 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.evergreen-wallet p {
+  margin: 13px 0;
+}
+
+.evergreen-wallet a,
+.evergreen-wallet a:visited,
+.evergreen-wallet a:hover,
+.evergreen-wallet a:active {
+  color: #5c781f;
+  text-decoration: none;
+}
+
+.evergreen-wallet {
+  /*position: fixed;
+  top: 30px;
+  right: 25px;*/
+  width: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #898989;
+  border: 1px solid #b2b2b2;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.18), 0 0 10px rgba(0, 0, 0, 0.06);
+  z-index: 1001;
+}
+
+.evergreen-wallet .ew-wrap {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/*.evergreen-wallet:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  right: 27px;
+  width: 17px;
+  height: 9px;
+  background: url(../img/misc_arrow.png);
+}*/
+
+.evergreen-wallet input[type="text"],
+.evergreen-wallet input[type="email"],
+.evergreen-wallet input[type="password"] {
+  display: inline-block;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #a8a8a8;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #898989;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.33);
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.evergreen-wallet button {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #7da327;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #5c781f;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.35), 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c1dd6e), to(#91bd32));
+  background-image: -webkit-linear-gradient(top, #c1dd6e, #91bd32);
+  background-image: -moz-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: -o-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: linear-gradient(to bottom, #c1dd6e, #91bd32);
+}
+
+.evergreen-wallet button.grey {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f1f5), to(#e2e4ec));
+  background-image: -webkit-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: -moz-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: -o-linear-gradient(top, #f0f1f5, #e2e4ec);
+  background-image: linear-gradient(to bottom, #f0f1f5, #e2e4ec);
+  border-color: #aaa;
+  color: #8c90a2;
+}
+
+.evergreen-wallet header {
+  position: relative;
+  height: 55px;
+  border-bottom: 1px solid #b5b5b5;
+  background: url(../img/bg_head.png);
+}
+
+.evergreen-wallet .logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 27px;
+  height: 34px;
+  margin: -17px 0 0 -13.5px;
+  text-indent: -9999em;
+  outline: 0;
+  background: url(../img/logo.png);
+}
+
+.evergreen-wallet .action-icons {
+  float: right;
+  margin: 0 10px 0 0;
+  padding: 0;
+  line-height: 55px;
+  font-weight: bold;
+  list-style: none;
+}
+
+.evergreen-wallet .action-icons li {
+  float: left;
+}
+
+.evergreen-wallet .action-icons a {
+  display: block;
+  padding: 0 0 0 8px;
+}
+
+.evergreen-wallet .evergreen-wallet .action-icons a:hover {
+  color: #4b4b4b;
+}
+
+.evergreen-wallet .action-icons .ico-cart {
+  width: 32px;
+  height: 55px;
+  padding: 0;
+  text-indent: -9999em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/ico_cart.png);
+}
+
+.evergreen-wallet .action-icons .active .ico-cart,
+.evergreen-wallet .action-icons .ico-cart:hover {
+  background-image: url(../img/ico_cart_active.png);
+}
+
+.evergreen-wallet .action-icons .ico-lock {
+  width: 32px;
+  height: 55px;
+  padding: 0;
+  text-indent: -9999em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/ico_lock.png);
+}
+
+.evergreen-wallet .action-icons .ico-user {
+  width: 32px;
+  height: 55px;
+  padding: 0;
+  text-indent: -9999em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/ico_user.png);
+}
+
+.evergreen-wallet .action-icons .active .ico-user,
+.evergreen-wallet .action-icons .ico-user:hover {
+  background-image: url(../img/ico_user_active.png);
+}
+
+.evergreen-wallet main {
+  padding: 0 20px;
+  background: #fff;
+}
+
+.evergreen-wallet h3 {
+  margin: 0 0 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #4b4b4b;
+}
+
+.evergreen-wallet .balance-bar {
+  margin: 0 -20px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #cfd9b8;
+  background: #eff6df;
+}
+
+.evergreen-wallet .balance-bar .coins {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 28px;
+  color: #95c036;
+}
+
+.evergreen-wallet .balance-bar .coins i {
+  display: inline-block;
+  width: 22px;
+  height: 30px;
+  text-indent: -9999em;
+  background: url(../img/ico_coin.png) center 70% no-repeat;
+}
+
+.evergreen-wallet .balance-bar .money {
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4b4b4b;
+}
+
+.evergreen-wallet .balance-bar .money strong {
+  font-size: 30px;
+}
+
+.evergreen-wallet .list-item {
+  padding-top: 15px;
+}
+
+.evergreen-wallet .list-item ul {
+  margin: -10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.evergreen-wallet .list-item li {
+  margin: 0 -20px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ededed;
+  line-height: 21px;
+}
+
+.evergreen-wallet .list-item li i {
+  display: inline-block;
+  width: 10px;
+  height: 21px;
+  margin: 0 18px;
+  text-indent: -9999em;
+  background: url(../img/ico_arrow.png) center center no-repeat;
+}
+
+.evergreen-wallet .list-item li strong {
+  float: right;
+  color: #95c036;
+}
+
+.evergreen-wallet .pay-bar {
+  padding: 20px 0;
+}
+
+.evergreen-wallet .pay-bar input:first-child {
+  width: 170px;
+  margin-right: 10px;
+}
+
+.evergreen-wallet .pay-bar input {
+  width: 80px;
+}
+
+.evergreen-wallet .pay-bar button {
+  float: right;
+}
+
+.evergreen-wallet footer {
+  overflow: hidden;
+  border-top: 1px solid #c4c4c4;
+  background: #f5f5f5;
+  text-align: center;
+  box-shadow: inset 0 2px 2px rgba( 0, 0, 0, 0.05);
+}
+
+.evergreen-wallet .success {
+  color: #95c036;
+}
+
+.evergreen-wallet .error {
+  color: #fc8888;
+}
+
+.evergreen-wallet .login-form {
+  padding: 25px 60px 30px;
+}
+
+.evergreen-wallet .login-form h3 {
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+  color: #95c036;
+}
+
+.evergreen-wallet .login-form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.evergreen-wallet .login-form a {
+  display: inline-block;
+  padding: 0 10px;
+  font-weight: bold;
+  line-height: 32px;
+  color: #5c781f;
+}
+
+.evergreen-wallet .login-form .back {
+  width: 21px;
+  text-indent: -9999em;
+  background: url(../img/arrow_back.png) center center no-repeat;
+}
+
+.evergreen-wallet .login-form button {
+  float: right;
+  height: 32px;
+}
+
+.evergreen-wallet .login-form em {
+  display: block;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.evergreen-wallet .switch-store {
+  margin: 0 -20px;
+  padding: 15px 20px 20px;
+  border-bottom: 1px solid #d6d9e0;
+  background: #f3f4f6;
+}
+
+.evergreen-wallet .switch-store input {
+  width: 270px;
+}
+
+.evergreen-wallet .switch-store button {
+  float: right;
+}
+
+.evergreen-wallet .up {
+  display: block;
+  height: 30px;
+  margin: 0 -20px;
+  text-indent: -9999em;
+  border-top: 1px solid #c4c4c4;
+  background: #e9e9e9 url(../img/arrow_up.png) center center no-repeat;
+}
+
+.evergreen-wallet .expander {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  border: 1px solid #c1c1c1;
+  text-indent: -9999em;
+  border-radius: 18px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.11);
+  background: url(../img/arrow_right.png) center center no-repeat;
+}
+
+.evergreen-wallet .expander.on {
+  background: url(../img/arrow_down.png) center center no-repeat;
+}
+
+.evergreen-wallet .expanded {
+  display: none;
+}
+
+.evergreen-wallet .expanded dl,
+.evergreen-wallet .expanded dt,
+.evergreen-wallet .expanded dd {
+  margin: 0;
+  padding: 0;
+}
+
+.evergreen-wallet .expanded dt {
+  float: left;
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+.evergreen-wallet .fb-connect {
+  display: block;
+  width: 241px;
+  height: 42px;
+  margin: 0 auto;
+  text-indent: -9999em;
+  background: url(../img/btn_fb.png) no-repeat;
+}
+
+.evergreen-wallet .list-item .list-btn {
+  float: right;
+  margin-left: 10px;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  font-weight: bold;
+  padding: 0 12px;
+  color: #fff;
+  background: #85b619;
+  border-radius: 2px;
+}
+
+.evergreen-wallet .curr-change .curr-tab {
+  display: block;
+  margin: 0 -20px;
+  padding: 0 20px;
+  line-height: 30px;
+  background: #f5f5f5;
+  font-weight: bold;
+  text-align: right;
+  color: #4b4b4b;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.evergreen-wallet .curr-change .curr-tab span {
+  display: inline-block;
+  padding-left: 26px;
+  background: url(../img/arrow_change.png) 0 center no-repeat;
+}
+
+.evergreen-wallet .curr-tab-content {
+  padding-top: 15px;
+}
+
+.evergreen-wallet .curr-tab-content h3 {
+  margin-bottom: 10px;
+}
+
+.evergreen-wallet .curr-tab-content ol {
+  margin: 0 0 18px;
+  padding: 0 0 0 20px;
+  line-height: 26px;
+}
+
+.evergreen-wallet .curr-tab-content dl,
+.evergreen-wallet .curr-tab-content dt,
+.evergreen-wallet .curr-tab-content dd {
+  margin: 0;
+  padding: 0;
+}
+
+.evergreen-wallet .curr-tab-content dt {
+  float: left;
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+.evergreen-wallet .curr-tab-content dl {
+  margin-bottom: 5px;
+}
+
+.evergreen-wallet .ico-ever {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  text-indent: -9999em;
+  background: url(../img/ico_ever.png) no-repeat;
+}
+
+.evergreen-wallet .curr-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.evergreen-wallet .curr-list li {
+  height: 47px;
+  line-height: 47px;
+  border-bottom: 1px solid #ededed;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.evergreen-wallet .curr-list li:first-child {
+  border-top: 1px solid #ededed;
+}
+
+.evergreen-wallet .curr-list .active {
+  font-weight: bold;
+}
+
+.evergreen-wallet .curr-list a {
+  display: inline-block;
+  width: 18px;
+  text-indent: -9999em;
+  background: url(../img/checkbox.png) 0  center no-repeat;
+}
+
+.evergreen-wallet .curr-list .active a {
+  background: url(../img/checkbox_checked.png) 0 center no-repeat;
+}
+
+@media (max-width: 480px) {
+  .evergreen-wallet button {
+    width: 60px;
+    font-size: 12px;
+  }
+  .evergreen-wallet .pay-bar input:first-child {
+    width: 120px;
+    margin-right: 5px;
+  }
+  .evergreen-wallet .switch-store input {
+    width: 210px;
+  }
+  .evergreen-wallet .login-form {
+    padding: 25px 20px 30px;
+  }
+}
