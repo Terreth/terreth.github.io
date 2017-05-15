@@ -1,5 +1,13 @@
-<<<<<<< HEAD
 =======
-# breathe
->>>>>>> cd0c65f4e15916b8311f68a4240391b1647a20cd
-# terreth.github.io
+terreth
+
+
+A land-backed ethereum token.
+
+
+#what we've built:
+
+Smart contract liquid democracy system
+Online management software
+Integrated nation-state legal system
+Contracts for deployment with leading international partners
